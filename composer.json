@@ -1,0 +1,13 @@
+{
+    "name": "andrefmandrade/geekplant",
+    "description": "Desafio para o processo seletivo da Checkplant",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Andre Felipe",
+            "email": "andrefmandrade@outlook.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

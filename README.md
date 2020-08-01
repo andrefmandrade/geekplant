@@ -6,7 +6,7 @@ Geekplant é a solução para o desafio proposto para o processo de seletivo da 
 
 # Instruções
 
-Para executar o desafio, só é necessário um servidor Apache rodando (WAMP/XAMP e afins), e a aplicação deve estar na document_root do mesmo.
+Para executar o desafio, só é necessário WAMP/XAMP e afins, e a aplicação deve estar na document_root do mesmo.
 Não é necessário instalar nenhuma biblioteca e nem executar composer install.
 
 # Descrição

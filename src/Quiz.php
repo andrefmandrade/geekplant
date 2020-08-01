@@ -1,6 +1,6 @@
 <?php
 
-class Util {
+class Quiz {
   private $questions;
   private $series;
 
@@ -61,23 +61,23 @@ class Util {
     $this->series = [
       "a" => [
         "title" => "House of Cards",
-        "description" => "Você é House of Cards: ataca o problema com método e faz de tudo para resolver a situação."
+        "description" => "Você é House of Cards: Ataca o problema com método e faz de tudo para resolver a situação."
       ],
       "b" => [
         "title" => "Game of Thrones",
-        "description" => "Você é Game of Thrones: não tem muita delicadeza nas ações, mas resolve o problema de forma prática."
+        "description" => "Você é Game of Thrones: Não tem muita delicadeza nas ações, mas resolve o problema de forma prática."
       ],
       "c" => [
         "title" => "Lost",
-        "description" => "Você é Lost: faz as coisas sem ter total certeza se é o caminho certo ou se faz sentido, mas no final dá tudo certo."
+        "description" => "Você é Lost: Faz as coisas sem ter total certeza se é o caminho certo ou se faz sentido, mas no final dá tudo certo."
       ],
       "d" => [
         "title" => "Breaking Bad",
-        "description" => "Você é Breaking Bad: pra fazer acontecer você toma a liderança, mas sempre contando com seus parceiros."
+        "description" => "Você é Breaking Bad: Pra fazer acontecer você toma a liderança, mas sempre contando com seus parceiros."
       ],
       "e" => [
         "title" => "Silicon Valley",
-        "description" => "Você é Silicon Valley: vive a tecnologia o tempo todo e faz disso um mantra para cada situação no dia."
+        "description" => "Você é Silicon Valley: Vive a tecnologia o tempo todo e faz disso um mantra para cada situação no dia."
       ],
     ];
   }
@@ -100,5 +100,30 @@ class Util {
 
   public function getSerie($serie_letter) {
     return $this->series[$serie_letter];
+  }
+
+  public function getWinner($arr) {
+    $most_occurrences=[];
+    $occurrences=0;
+    $last_occurrence=0;
+    $winner_key='';
+
+    foreach ($arr as $key => $value) {
+      if($value['occurrences'] >= $occurrences) {
+        $occurrences=$value['occurrences'];
+        $most_occurrences[$key]=$value;
+      }
+    }
+
+    if(!empty($most_occurrences)) {
+      foreach ($most_occurrences as $key => $value) {
+        if($value['last_ocurrence'] > $last_occurrence) {
+          $last_occurrence=$value['last_ocurrence'];
+          $winner_key=$key;
+        }
+      }
+    }
+
+    return $this->getSerie($winner_key);
   }
 }

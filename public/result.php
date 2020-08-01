@@ -1,8 +1,7 @@
 <?php 
 session_start();
 
-require_once("../src/Util.php");
-$util = new Util();
+require_once("includes/header.php");
 
 if(!isset($_POST['question']) || !isset($_POST['answer'])) {
   header('Location: index.php');
@@ -40,24 +39,16 @@ foreach ($_SESSION['answers'] as $key => $value) {
   $gather_answers[$value]["last_ocurrence"]=$key;
 }
 
-var_dump($gather_answers);
+$winner = $quiz->getWinner($gather_answers);
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geekplant</title>
-
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-
-<body>
 <section id="result">
-  
+  <div id="serie">
+    <p id="title"><?php echo explode(":", $winner['description'])[0]; ?></p>
+    <p id="description"><?php echo explode(":", $winner['description'])[1]; ?></p>
+    <button onclick='window.location.href = "index.php"'>Voltar</button>
+  </div>
 </section>
-</body>
 
-</html>
+<?php require_once("includes/footer.php"); ?>

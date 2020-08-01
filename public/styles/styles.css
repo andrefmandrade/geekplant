@@ -116,7 +116,7 @@ p {
 }
 
 button {
-  width: 35%;
+  width: 30%;
   height: 35px;
   background: #6EC27C;
   border-radius: 5px;
@@ -159,7 +159,7 @@ label {
   padding: 40px 30px 30px;
 }
 
-.answers input {
+.answers input, label {
   cursor: pointer;
 }
 

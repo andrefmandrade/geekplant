@@ -22,8 +22,8 @@ if(isset($_POST)) {
     <input type="hidden" name="question" value="2">
       <div class="answers">
         <?php foreach ($quiz->shuffle_assoc($question['answers']) as $key => $value) { ?>
-          <input type="radio" name="answer" value="<?php echo $key ?>" <?php echo $key==="a" ? "checked" : "" ?>>
-        <label for="answer"><?php echo $value ?></label></br>
+        <input type="radio" name="answer" id="answer<?php echo $key?>" value="<?php echo $key ?>" <?php echo $key===$select_random ? "checked" : "" ?>>
+        <label for="answer<?php echo $key?>"><?php echo $value ?></label></br>
         <?php } ?>
       </div>
       <div class="footer">

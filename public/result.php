@@ -3,12 +3,12 @@ session_start();
 
 require_once("includes/header.php");
 
-if(!isset($_POST['question']) || !isset($_POST['answer'])) {
-  header('Location: index.php');
+if(!empty($_POST)) {
+  $_SESSION['answers'][$_POST['question']]=$_POST['answer'];
 }
 
-if(isset($_POST)) {
-  $_SESSION['answers'][$_POST['question']]=$_POST['answer'];
+if(count($_SESSION['answers']) !== 5) {
+  header('Location: index.php');
 }
 
 $gather_answers = [

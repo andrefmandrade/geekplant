@@ -1,3 +1,3 @@
 <?php
-  header('Location: /geekplant/public/');
+  header('Location: /geekplant/public/index.php');
 ?>

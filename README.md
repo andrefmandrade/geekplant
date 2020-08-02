@@ -13,4 +13,4 @@ Não é necessário instalar nenhuma biblioteca e nem executar composer install.
 
 O desafio consiste de cinco perguntas, e para cada pegunta existe um total de cinco alternativas (randomizadas a cada execução), o algoritmo deve decidir baseado nas respostas qual a série corresponde melhor as respostas. O critério de escolha é por ocorrência das respostas, e caso ocorra um empate a ultima ocorrência das empatadas é a escolhida.
 Cada resposta representa uma série pré-definida, ao final uma frase deve ser apresentada de acordo com o resultado.
-O desafio foi executado utilizando PHP (HTML, CSS) nativos, sem a adição de nenhuma biblioteca externa.
+O desafio foi executado utilizando PHP (HTML, CSS, JavaScript).

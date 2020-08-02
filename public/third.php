@@ -12,33 +12,6 @@ if(!empty($_POST)) {
 }
 
 ?>
-<script>
-function submit() {
-
-  isChecked = $("input[type=radio]:checked").length;
-
-  if(!isChecked) {
-    console.log("Selecionar uma resposta");
-    return;
-  }
-
-  const values = {
-    question: $("input[name=question]").val(),
-    answer: $("input[name=answer]:checked").val()
-  }
-
-  $.ajax({
-    url: 'fourth.php',
-    type: 'POST',
-    data: values,
-
-    success: function(result) {
-      window.location='fourth.php';
-    }
-  });
-}
-</script>
-
 <section id="third_question">
   <div class="card">
     <?php $question = $quiz->getQuestion(3); ?>
@@ -54,7 +27,7 @@ function submit() {
         <?php } ?>
       </div>
       <div class="footer">
-        <button type="button" onclick="submit()">Avançar</button>
+        <button type="button" onclick="submit('fourth.php')">Avançar</button>
       </div>
     </div>
   </div>

@@ -1,0 +1,30 @@
+.toast {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 400px;
+  padding: 6px;
+  background-color: #cccccc;
+  color: #333333;
+  text-align: center;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, top 0.2s, visibility 0.2s;
+}
+
+.toast--visible {
+  top: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.toast--error {
+  background: #9b4343;
+  background-color: #d86262;
+  color: #ffffff;
+}

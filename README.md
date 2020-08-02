@@ -2,6 +2,8 @@
 
 ![Geekplant](demo/geekplant.gif)
 
+## Demonstração: [Geekplant](https://geekplant.herokuapp.com/public/index.php)
+
 Geekplant é a solução para o desafio proposto para o processo de seletivo da [Checkplant](https://www.checkplant.com.br/), o desafio é composto de um quiz para definir  a série que melhor te representa.
 
 ## Instruções
